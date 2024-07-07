@@ -3,13 +3,25 @@ package Course.Projects;
 import java.util.*;
 
 public class ATM {
+    static int withdraw;
+    static int balance;
 
     private static void Withdraw() {
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter the amount you want ot Withdraw: ");
+        withdraw = sc.nextInt();
+
+        if (balance >= withdraw) {
+            balance = balance - withdraw;
+            System.out.println("Please collect your Money");
+        } else {
+            System.out.println("Insufficient Balance");
+        }
     }
 
     private static void Deposite() {
         System.out.print("Enter the amount you want to Deposite: ");
+
     }
 
     private static void Balance() {
