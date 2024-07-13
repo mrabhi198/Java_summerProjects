@@ -1,10 +1,11 @@
-package Course.Projects;
+package Course.Java_summerProjects;
 
 import java.util.*;
 
 public class ATM {
     static int withdraw;
     static int balance;
+    static int deposite;
 
     private static void Withdraw() {
         Scanner sc = new Scanner(System.in);
@@ -17,15 +18,23 @@ public class ATM {
         } else {
             System.out.println("Insufficient Balance");
         }
+        System.out.println(" ");
     }
 
     private static void Deposite() {
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter the amount you want to Deposite: ");
+        deposite = sc.nextInt();
+        balance += deposite;
+
+        System.out.println("Deposite Successfully");
+        System.out.println(" ");
 
     }
 
     private static void Balance() {
-        System.out.print("Your Balance are: ");
+        System.out.print("Your Balance are: " + balance);
+        System.out.println(" ");
     }
 
     private static void Exit() {
